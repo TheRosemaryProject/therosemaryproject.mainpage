@@ -1,5 +1,7 @@
 <DOCTYPE html>
 <script src="https://kit.fontawesome.com/049529442a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <style>
             body {
                 object-fit: cover;
@@ -239,3 +241,35 @@
 <a class="nav-button acrylic active topnav-button" href="https://github.com/gonerogueproductions"><i class="fa-duotone fa-circle-half"></i>we are a part of GoneRogueProductions!! see the github page</a>
         </div>
         </div>
+ <script>
+            let hideMenuVar = false;
+            function hideMenu() {
+                if (hideMenuVar === false) {
+                    $(".sidenav").css("width","100px");
+                    $(".nav-button").css("padding-left","1.75vh");
+                    $(".nav-button").css("padding-right","1.75vh");
+                    $(".download-button").css("padding-left","2vh");
+                    $(".docs-button").css("padding-left","1.95vh");
+                    $(".nav-button").css("white-space","nowrap");
+                    $(".nav-button").css("justify-content","left");
+                    $(".nav-button").css("gap","100vh");
+                    $(".rsmy-title").css("display","none");
+                    $(".main").css("padding-left","125px");
+                    setTimeout(function() {
+                        $(".menu-button").css("width","100%");
+                        $(".rsmy-favicon").css("display","initial");
+                    }, 110);
+                    hideMenuVar = true;
+                }
+                else if (hideMenuVar === true) {
+                    $(".nav-button").css("padding-left","25px");
+                    $(".nav-button").css("gap","10px");
+                    $(".sidenav").css("width","300px");
+                    $(".rsmy-favicon").css("display","none");
+                    $(".rsmy-title").css("display","initial");
+                    $(".main").css("padding-left","325px");
+                    $(".menu-button").css("width","auto");
+                    hideMenuVar = false;
+                }
+            }
+        </script>
